@@ -1,0 +1,16 @@
+import time
+print("Welcome to the suggested tip calculator.")
+time.sleep(1)
+print("We will help you today by calculating each persons share of your bill, after a tip of course.")
+time.sleep(1)
+total_bill = float(input("Please input the total of your bill for today in pounds?: £"))
+tip_percentage = int(input("Please choose the suggested tip percentage you would like. 5 10 or 15 etc: " ))
+number_of_payee = int(input("How many people are splitting the bill today?: "))
+single_payee = float(((total_bill / 100) * tip_percentage) + total_bill) / number_of_payee
+single_payee_rounded = round(single_payee, 2)
+print("Thank you, please wait a moment while we calculate that for you!")
+time.sleep(2)
+print(f"Your individual bill per person is £{single_payee_rounded} each.")
+time.sleep(2)
+print("Thank you for using the suggested tip calculator today.")
+print(f"We hope all {number_of_payee} of you had a lovely time!")
